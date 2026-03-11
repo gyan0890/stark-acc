@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --sn-navy: #0c0c4f;
+  --sn-blue: #1c1c84;
+  --sn-orange: #ec796b;
+  --sn-purple: #d672ef;
+  --sn-mauve: #e175b1;
+  --white-flare: #fbfbfb;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--sn-navy);
+  color: var(--white-flare);
+  font-family: var(--font-inter), 'Inter', sans-serif;
+}
+
+/* ── Gradient text ── */
+.gradient-text {
+  background: linear-gradient(135deg, #ec796b 0%, #d672ef 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Gradient button ── */
+.btn-gradient {
+  background: linear-gradient(135deg, #ec796b 0%, #d672ef 100%);
+  transition: opacity 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+.btn-gradient:hover {
+  opacity: 0.92;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(214, 114, 239, 0.35);
+}
+
+.btn-gradient:active {
+  transform: translateY(0);
+}
+
+/* ── Outline gradient button ── */
+.btn-outline-gradient {
+  background: transparent;
+  position: relative;
+  border: 1px solid rgba(236, 121, 107, 0.5);
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.btn-outline-gradient:hover {
+  border-color: rgba(214, 114, 239, 0.8);
+  background: rgba(214, 114, 239, 0.08);
+}
+
+/* ── Glass card ── */
+.glass-card {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-card:hover {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(214, 114, 239, 0.2);
+}
+
+/* ── Gradient border card ── */
+.gradient-border-card {
+  background: linear-gradient(#0c0c4f, #0c0c4f) padding-box,
+    linear-gradient(135deg, rgba(236, 121, 107, 0.4), rgba(214, 114, 239, 0.4))
+      border-box;
+  border: 1px solid transparent;
+}
+
+/* ── Section separator ── */
+.section-sep {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(236, 121, 107, 0.25) 30%,
+    rgba(214, 114, 239, 0.25) 70%,
+    transparent 100%
+  );
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--sn-navy);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(214, 114, 239, 0.4);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(214, 114, 239, 0.7);
+}
+
+/* ── Stagger delay utilities ── */
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
