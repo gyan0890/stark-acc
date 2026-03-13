@@ -1,8 +1,7 @@
 import Navbar from '@/components/Navbar'
 import Hero from '@/components/Hero'
-import Program from '@/components/Program'
 import Partners from '@/components/Partners'
-import Ecosystem from '@/components/Ecosystem'
+import Program from '@/components/Program'
 import FAQ from '@/components/FAQ'
 import ApplyCTA from '@/components/ApplyCTA'
 import Footer from '@/components/Footer'
@@ -16,15 +15,11 @@ export default function Home() {
       {/* Section separator */}
       <div className="section-sep mx-6 lg:mx-10" />
 
-      <Program />
-
-      <div className="section-sep mx-6 lg:mx-10" />
-
       <Partners />
 
       <div className="section-sep mx-6 lg:mx-10" />
 
-      <Ecosystem />
+      <Program />
 
       <div className="section-sep mx-6 lg:mx-10" />
 

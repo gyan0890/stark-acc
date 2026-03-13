@@ -35,7 +35,7 @@ const programDetails = [
   { label: 'Format', value: 'Remote-first, high-intensity', icon: '🌐' },
   { label: 'Cohort Size', value: 'Small & selective', icon: '🏆' },
   { label: 'Masterclasses', value: 'Weekly, world-class mentors', icon: '🎓' },
-  { label: 'Demo Day', value: 'Live investor showcase', icon: '🎤' },
+  { label: 'Demo Week', value: 'IRL investor showcase', icon: '🎤', highlight: true },
   { label: 'Equity', value: 'TBD — announced with Cohort 1', icon: '📝' },
 ]
 
@@ -122,11 +122,22 @@ export default function Program() {
             {programDetails.map((detail) => (
               <div
                 key={detail.label}
-                className="gradient-border-card rounded-xl p-4 text-center"
+                className={`rounded-xl p-4 text-center ${
+                  (detail as { highlight?: boolean }).highlight
+                    ? 'bg-gradient-to-br from-[#EC796B]/20 to-[#D672EF]/20 border border-[#EC796B]/40 ring-1 ring-[#EC796B]/30'
+                    : 'gradient-border-card'
+                }`}
               >
                 <div className="text-2xl mb-2">{detail.icon}</div>
                 <div className="text-xs text-white/40 uppercase tracking-wider mb-1">{detail.label}</div>
-                <div className="text-sm font-semibold text-white/85">{detail.value}</div>
+                <div className={`text-sm font-semibold ${(detail as { highlight?: boolean }).highlight ? 'text-[#EC796B]' : 'text-white/85'}`}>
+                  {detail.value}
+                </div>
+                {(detail as { highlight?: boolean }).highlight && (
+                  <span className="inline-block mt-2 text-[10px] font-bold tracking-widest uppercase px-2 py-0.5 rounded-full bg-[#EC796B]/20 text-[#EC796B] border border-[#EC796B]/30">
+                    IRL Event
+                  </span>
+                )}
               </div>
             ))}
           </div>

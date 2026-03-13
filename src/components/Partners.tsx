@@ -86,8 +86,7 @@ export default function Partners() {
             Investor Network
           </p>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight mb-6">
-            Backed by the World&apos;s Best{' '}
-            <span className="gradient-text">Web3 Investors</span>
+            <span className="gradient-text">Starknet Investor Network</span>
           </h2>
           <p className="text-lg text-white/55 leading-relaxed">
             Stark/Acc founders get direct access to a curated network of top-tier
