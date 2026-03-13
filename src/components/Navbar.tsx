@@ -83,9 +83,8 @@ const StarknetIcon = () => (
 )
 
 const navLinks = [
-  { label: 'Program', href: '#program' },
   { label: 'Partners', href: '#partners' },
-  { label: 'Ecosystem', href: '#ecosystem' },
+  { label: 'Program', href: '#program' },
   { label: 'FAQ', href: '#faq' },
 ]
 
