@@ -22,6 +22,7 @@ const partners = [
   { name: 'Dracoon Ventures',  file: 'dracoon-ventures.png',   bg: '#000000',  darkBg: true  },
   { name: 'GSR Ventures',      file: 'gsr-ventures.png',       bg: '#ffffff',  darkBg: false },
   { name: 'Rayo Capital',      file: 'rayo-capital.png',       bg: '#0B1929',  darkBg: true  },
+  { name: 'Nascent',           file: 'nascent.png',            bg: '#000000',  darkBg: true  },
 ]
 
 function PartnerCard({ partner }: { partner: (typeof partners)[0] }) {
